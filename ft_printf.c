@@ -1,36 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cprojean <cprojean@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/29 13:47:59 by cprojean          #+#    #+#             */
-/*   Updated: 2022/12/01 16:33:08 by cprojean         ###   ########.fr       */
+/*   Created: 2022/12/01 12:36:04 by cprojean          #+#    #+#             */
+/*   Updated: 2022/12/01 17:46:21 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-void	ft_putstr(char *str, int size)
+int	ft_printf(const char *array, ...)
 {
-	int	index;
+	size_t	index;
+	va_list	variadic;
 
 	index = 0;
-	if (size == 0)
+	va_start(variadic, array);
+	while (array[index])
 	{
-		while (str[index])
+		if (array[index] != '%')
+			write(1, &array[index], 1);
+		if (array[index] == '%' && array[index + 1] != '\0')
 		{
-			write (1, &str[index], 1);
+			which_varia(array, variadic, index);
 			index++;
 		}
+		index++;
 	}
-	else
-	{
-		while (index <= size)
-		{
-			write (1, &str[index], 1);
-			index++;
-		}
-	}
+	va_end(variadic);
+	return (index);
 }

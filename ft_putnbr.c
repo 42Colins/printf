@@ -6,12 +6,11 @@
 /*   By: cprojean <cprojean@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 11:26:47 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/29 16:41:58 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/12/01 14:59:54 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
-#include <unistd.h>
 
 void	ft_next_putnbr(int x)
 {
@@ -47,10 +46,4 @@ void	ft_putnbr(int x)
 		ft_putnbr(x * -1);
 	}
 	ft_next_putnbr(x);
-}
-
-int main ()
-{
-	int nombre = 152316;
-	ft_putnbr(nombre);
 }
