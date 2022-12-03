@@ -22,19 +22,19 @@
 int		ft_printf(const char *array, ...);
 
 //ft_putchar
-void	ft_putchar(char c);
+void	ft_putchar(char c, int *count);
 
 //ft_putstr
-void	ft_putstr(char *str, int size);
+void	ft_putstr(char *str, int *count);
 
 //ft_putnbr
-void	ft_putnbr(int x);
+void	ft_putnbr(int x, int *count);
 
 //ft_convert_hexa
-char	*ft_convert_hexa_maj(int number);
-char	*ft_convert_hexa_min(int number);
-
+void	ft_convert_hexa_maj(size_t number, int *count);
+void	ft_convert_hexa_min(size_t number, int *count);
+void	ft_print_address(size_t number, int *count);
 //which_varia
-void	which_varia(const char *array, va_list variadic, size_t index);
+void	which_varia(const char *array, va_list variadic, size_t *index, int *count);
 
 #endif

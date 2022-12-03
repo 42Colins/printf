@@ -6,65 +6,22 @@
 /*   By: cprojean <cprojean@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 16:43:48 by cprojean          #+#    #+#             */
-/*   Updated: 2022/12/03 15:41:02 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/12/03 19:33:50 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-char	*init_array(int number);
-char	*fill_hexa(int number, char *str);
-
-char	*ft_convert_hexa_min(int number)
-{
-	char	*str;
-
-	str = init_array(number);
-	str = fill_hexa(number, str);
-	return (str);
-}
-
-char	*init_array(int number)
-{
-	int		index;
-	char	*str;
-
-	index = 0;
-	if (number < 0)
-	{
-		number = number * -1;
-		index++;
-	}
-	while (number > 16)
-	{
-		index++;
-	}
-	str = malloc(sizeof(int) * index);
-	return (str);
-}
-
-char	*fill_hexa(int number, char *str)
+void	ft_convert_hexa_min(size_t number, int *count)
 {
 	char	*hexa;
-	int		mod;
-	int		index;
 
-	index = 0;
 	hexa = "0123456789abcdef";
-	if (number < 0)
+	if (number >= 16)
 	{
-		str[0] = '-';
-		fill_hexa(number * -1, str);
+		ft_convert_hexa_min(number / 16, count);
+		ft_putchar(hexa[number % 16], count);
 	}
-	while (number > 16)
-	{
-		mod = number % 16;
-		number = number / 16;
-		if (str[0] == '-')
-			str[index + 1] = hexa[mod];
-		else
-			str[index] = hexa[mod];
-		index++;
-	}
-	return (str);
+	else
+		ft_putchar(hexa[number % 16], count);
 }

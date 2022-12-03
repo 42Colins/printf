@@ -6,13 +6,22 @@
 /*   By: cprojean <cprojean@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 15:58:21 by cprojean          #+#    #+#             */
-/*   Updated: 2022/12/02 15:59:50 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/12/03 19:37:17 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-char	*ft_print_address(void *)
+void	ft_print_address(size_t number, int *count)
 {
+	char	*hexa;
 
+	hexa = "0123456789abcdef";
+	if (number >= 16)
+	{
+		ft_print_address(number / 16, count);
+		ft_putchar(hexa[number % 16], count);
+	}
+	else
+		ft_putchar(hexa[number % 16], count);
 }

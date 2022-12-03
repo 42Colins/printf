@@ -4,7 +4,8 @@
 int main()
 {
 	int x = 1523;
-	char *str = "salut";
-	ft_printf("%dsaljlqnegk eqwgag \n %p\n",x, str);
-	printf("%dsaljlqnegk eqwgag\n %s\n",x, str);
+	int hex = 13546;
+	char *str;
+	str = NULL;
+	ft_printf("%dsaljlqnegk% eqwgag \nc%", 154);
 }
