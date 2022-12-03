@@ -29,12 +29,13 @@ void	ft_putstr(char *str, int *count);
 
 //ft_putnbr
 void	ft_putnbr(int x, int *count);
+void	ft_putlnbr(unsigned int x, int *count);
 
 //ft_convert_hexa
-void	ft_convert_hexa_maj(size_t number, int *count);
-void	ft_convert_hexa_min(size_t number, int *count);
+void	ft_convert_hexa_maj(unsigned int number, int *count);
+void	ft_convert_hexa_min(unsigned int number, int *count);
 void	ft_print_address(size_t number, int *count);
 //which_varia
-void	which_varia(const char *array, va_list variadic, size_t *index, int *count);
+void	which_varia(const char *array, va_list variadic, size_t *i, int *count);
 
 #endif

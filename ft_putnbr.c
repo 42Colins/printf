@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cprojean <cprojean@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: cprojean <cprojean@42lyon.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 11:26:47 by cprojean          #+#    #+#             */
-/*   Updated: 2022/12/03 18:23:17 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/12/03 23:54:49 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,12 @@ void	ft_next_putnbr(int x, int *count)
 		mod = x % 10 + 48;
 		x = x / 10;
 		ft_next_putnbr(x, count);
-		write (1, &mod, 1);
-		*count = *count + 1;
+		ft_putchar(mod, count);
 	}
 	else if ((x >= 0) && (x < 10))
 	{
 		mod = (x % 10) + 48;
-		write(1, &mod, 1);
-		*count = *count + 1;
+		ft_putchar(mod, count);
 	}
 }
 
@@ -39,15 +37,12 @@ void	ft_putnbr(int x, int *count)
 	dash = '-';
 	if (x == -2147483648)
 	{
-		write (1, &dash, 1);
-		write (1, "2147483648", 10);
-		*count = *count + 11;
+		ft_putstr("-2147483648", count);
 		return ;
 	}
 	else if (x < 0)
 	{
-		write (1, &dash, 1);
-		*count = *count + 1;
+		ft_putchar(dash, count);
 		ft_putnbr(x * -1, count);
 	}
 	ft_next_putnbr(x, count);

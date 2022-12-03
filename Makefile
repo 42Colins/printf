@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: cprojean <cprojean@student.42lyon.fr>      +#+  +:+       +#+         #
+#    By: cprojean <cprojean@42lyon.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/30 11:36:52 by cprojean          #+#    #+#              #
-#    Updated: 2022/12/03 17:08:29 by cprojean         ###   ########.fr        #
+#    Updated: 2022/12/03 23:23:43 by cprojean         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,7 @@ SRCS =						ft_printf.c				\
 							ft_convert_hexa_min.c	\
 							ft_print_address.c		\
 							ft_putnbr.c				\
+							ft_putlnbr.c			\
 							ft_putstr.c				\
 							which_varia.c			\
 							ft_putchar.c			\

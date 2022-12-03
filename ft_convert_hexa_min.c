@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_convert_hexa_min.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cprojean <cprojean@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: cprojean <cprojean@42lyon.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 16:43:48 by cprojean          #+#    #+#             */
-/*   Updated: 2022/12/03 19:33:50 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/12/03 23:45:57 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_convert_hexa_min(size_t number, int *count)
+void	ft_convert_hexa_min(unsigned int number, int *count)
 {
 	char	*hexa;
 

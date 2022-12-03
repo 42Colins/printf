@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cprojean <cprojean@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: cprojean <cprojean@42lyon.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 12:36:04 by cprojean          #+#    #+#             */
-/*   Updated: 2022/12/03 19:50:16 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/12/04 00:00:15 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_printf(const char *array, ...)
 	while (array[index])
 	{
 		if (array[index] != '%')
-			count += write(1, &array[index], 1);
+			ft_putchar(array[index], &count);
 		if (array[index] == '%' && array[index + 1] != '\0')
 		{
 			which_varia(array, variadic, &index, &count);

@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putlnbr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cprojean <cprojean@42lyon.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/29 13:47:59 by cprojean          #+#    #+#             */
-/*   Updated: 2022/12/03 23:52:54 by cprojean         ###   ########.fr       */
+/*   Created: 2022/12/03 23:16:37 by cprojean          #+#    #+#             */
+/*   Updated: 2022/12/03 23:50:49 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putstr(char *str, int *count)
+void	ft_putlnbr(unsigned int x, int *count)
 {
-	int		index;
-	char	*null;
+	char	mod;
 
-	null = "(null)";
-	index = 0;
-	if (!str)
+	if (x > 9)
 	{
-		str = null;
+		mod = x % 10 + 48;
+		x = x / 10;
+		ft_putlnbr(x, count);
+		ft_putchar(mod, count);
 	}
-	while (str[index])
+	else if ((x >= 0) && (x < 10))
 	{
-		ft_putchar(str[index], count);
-		index++;
+		mod = (x % 10) + 48;
+		ft_putchar(mod, count);
 	}
 }

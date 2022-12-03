@@ -3,40 +3,39 @@
 /*                                                        :::      ::::::::   */
 /*   which_varia.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cprojean <cprojean@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: cprojean <cprojean@42lyon.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 12:48:03 by cprojean          #+#    #+#             */
-/*   Updated: 2022/12/03 19:54:26 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/12/03 23:43:34 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	which_varia(const char *array, va_list variadic, size_t *index, int *count)
+void	which_varia(const char *array, va_list variadic, size_t *i, int *count)
 {
 	char	dash;
 
 	dash = '%';
-	if (array[*index + 1] == 'c')
+	if (array[*i + 1] == 'c')
 		ft_putchar(va_arg(variadic, int), count);
-	else if (array[*index + 1] == 's')
+	else if (array[*i + 1] == 's')
 		ft_putstr(va_arg(variadic, char *), count);
-	else if (array[*index + 1] == 'p')
+	else if (array[*i + 1] == 'p')
 	{
 		ft_putstr("0x", count);
-		*count = *count + 2;
 		ft_print_address(va_arg(variadic, size_t), count);
 	}
-	else if ((array[*index + 1] == 'd') || (array[*index + 1] == 'i')
-		|| (array[*index + 1] == 'u'))
+	else if ((array[*i + 1] == 'd') || (array[*i + 1] == 'i'))
 		ft_putnbr(va_arg(variadic, int), count);
-	else if (array[*index + 1] == 'x')
-		ft_convert_hexa_min(va_arg(variadic, size_t), count);
-	else if (array[*index + 1] == 'X')
-		ft_convert_hexa_maj(va_arg(variadic, size_t), count);
-	else if (array[*index + 1] == '%')
+	else if (array[*i + 1] == 'u')
+		ft_putlnbr(va_arg(variadic, unsigned int), count);
+	else if (array[*i + 1] == 'x')
+		ft_convert_hexa_min(va_arg(variadic, unsigned int), count);
+	else if (array[*i + 1] == 'X')
+		ft_convert_hexa_maj(va_arg(variadic, unsigned int), count);
+	else if (array[*i + 1] == '%')
 	{
-		write(1, &dash, 1);
-		*count = *count + 1;
+		ft_putchar(dash, count);
 	}
 }

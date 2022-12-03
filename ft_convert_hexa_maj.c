@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_convert_hexa_maj.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cprojean <cprojean@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: cprojean <cprojean@42lyon.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 16:43:42 by cprojean          #+#    #+#             */
-/*   Updated: 2022/12/03 19:38:36 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/12/03 23:46:02 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_convert_hexa_maj(size_t number, int *count)
+void	ft_convert_hexa_maj(unsigned int number, int *count)
 {
 	char	*hexa;
 
