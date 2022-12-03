@@ -1,35 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_print_address.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cprojean <cprojean@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/01 12:36:04 by cprojean          #+#    #+#             */
+/*   Created: 2022/12/02 15:58:21 by cprojean          #+#    #+#             */
 /*   Updated: 2022/12/02 15:59:50 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printf(const char *array, ...)
+char	*ft_print_address(void *)
 {
-	size_t	index;
-	va_list	variadic;
 
-	index = 0;
-	va_start(variadic, array);
-	while (array[index])
-	{
-		if (array[index] != '%')
-			write(1, &array[index], 1);
-		if (array[index] == '%' && array[index + 1] != '\0')
-		{
-			which_varia(array, variadic, index);
-			index++;
-		}
-		index++;
-	}
-	va_end(variadic);
-	return (index);
 }

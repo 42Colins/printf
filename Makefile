@@ -6,7 +6,7 @@
 #    By: cprojean <cprojean@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/30 11:36:52 by cprojean          #+#    #+#              #
-#    Updated: 2022/12/01 16:45:44 by cprojean         ###   ########.fr        #
+#    Updated: 2022/12/02 15:59:50 by cprojean         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ ARFLAGS = rcs
 
 rm = rm -rf
 
-HEADERS = libftprintf.h
+HEADERS = ft_printf.h
 
 SRCS =						ft_printf.c				\
 							ft_convert_hexa_maj.c	\

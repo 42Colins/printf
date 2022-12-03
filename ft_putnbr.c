@@ -6,11 +6,11 @@
 /*   By: cprojean <cprojean@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 11:26:47 by cprojean          #+#    #+#             */
-/*   Updated: 2022/12/01 14:59:54 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/12/02 15:59:50 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 void	ft_next_putnbr(int x)
 {

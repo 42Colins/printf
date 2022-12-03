@@ -6,11 +6,11 @@
 /*   By: cprojean <cprojean@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 12:48:03 by cprojean          #+#    #+#             */
-/*   Updated: 2022/12/01 16:49:54 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/12/02 15:59:50 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 void	which_varia(const char *array, va_list variadic, size_t index)
 {

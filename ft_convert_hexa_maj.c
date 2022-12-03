@@ -6,14 +6,14 @@
 /*   By: cprojean <cprojean@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 16:43:42 by cprojean          #+#    #+#             */
-/*   Updated: 2022/12/01 18:09:44 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/12/02 15:59:50 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
-char	*init_array_maj (size_t number);
-char	*fill_hexa_maj (size_t number, char *str);
+char	*init_array_maj(size_t number);
+char	*fill_hexa_maj(size_t number, char *str);
 
 char	*ft_convert_hexa_maj(int number)
 {

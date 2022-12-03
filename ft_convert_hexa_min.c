@@ -6,11 +6,11 @@
 /*   By: cprojean <cprojean@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 16:43:48 by cprojean          #+#    #+#             */
-/*   Updated: 2022/12/01 17:49:45 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/12/03 15:41:02 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 char	*init_array(int number);
 char	*fill_hexa(int number, char *str);
@@ -50,7 +50,7 @@ char	*fill_hexa(int number, char *str)
 	int		index;
 
 	index = 0;
-	hexa = "0123456789ABCDEF";
+	hexa = "0123456789abcdef";
 	if (number < 0)
 	{
 		str[0] = '-';
